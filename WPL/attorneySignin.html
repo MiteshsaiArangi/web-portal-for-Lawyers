@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attorney Sign-In</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(https://res.cloudinary.com/dzeal21vu/image/upload/v1730729139/client-value-hero-800x450-622187f1af774645bd2e06dd981c69d5-8c20e78fd91d4ff1b193d69586b86499_a6hdzt.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffffff00;
+        }
+
+        /* Form container styling */
+        .signin-container {
+            background-color: #000000;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .signin-container h2 {
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .text{
+            color: #ffffff;
+        }
+        .form-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .form-button:hover {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <h2> Attorney Sign-In</h2>
+        <form action="/submit" method="POST">
+            <input type="email" class="form-input" name="email" placeholder="Email" required>
+            <label for="" class="text">Bar Council Of India</label>
+            <input type="file" class="form-input" name="certificate" placeholder="Certificate">
+            <input type="password" class="form-input" name="password" placeholder="Create Password" required>
+            <input type="password" class="form-input" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit" class="form-button">Sign In</button>
+        </form>
+    </div>
+    <div class="MuiBox-root css-ga8z3t"><div class="MuiBox-root css-0"><div class="MuiBox-root css-1yjvs5a"><h5 class="MuiTypography-root MuiTypography-h5 css-aj7u7d">Welcome to Tablein!</h5><p class="MuiTypography-root MuiTypography-body1 css-jap8ps">Please sign-in to your account</p></div><div aria-hidden="true" class="MuiBackdrop-root css-lgrhwz" style="opacity: 0; visibility: hidden;"><span class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-adsc1h" role="progressbar" style="width: 40px; height: 40px;"><svg class="MuiCircularProgress-svg css-13o7eu2" viewBox="22 22 44 44"><circle class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-14891ef" cx="44" cy="44" r="20.2" fill="none" stroke-width="3.6"></circle></svg></span></div><form novalidate="" autocomplete="off"><div class="MuiFormControl-root MuiFormControl-fullWidth css-m2wtqd"><div class="MuiFormControl-root MuiTextField-root css-i44wyl"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-f58830" data-shrink="false" for=":r0:" id=":r0:-label">Email</label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-1vrqgw1"><input aria-invalid="true" id=":r0:" placeholder="Email" type="text" class="MuiInputBase-input MuiOutlinedInput-input css-hnuaa6" value="" fdprocessedid="k0uo8"><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-yjsfm1"><span>Email</span></legend></fieldset></div></div><p class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1s0ttpe">email is a required field</p></div><div class="MuiFormControl-root MuiFormControl-fullWidth css-m2wtqd"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-f58830" data-shrink="false" for="password">Password</label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ftlhhz"><input aria-invalid="false" id="password" type="password" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-185i5jo" value="" fdprocessedid="qxndqb"><div class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1nvf7g0"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-slyssw" tabindex="0" type="button" fdprocessedid="kcw2lw"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VisibilityOffOutlinedIcon"><path d="M12 6c3.79 0 7.17 2.13 8.82 5.5-.59 1.22-1.42 2.27-2.41 3.12l1.41 1.41c1.39-1.23 2.49-2.77 3.18-4.53C21.27 7.11 17 4 12 4c-1.27 0-2.49.2-3.64.57l1.65 1.65C10.66 6.09 11.32 6 12 6zm-1.07 1.14L13 9.21c.57.25 1.03.71 1.28 1.28l2.07 2.07c.08-.34.14-.7.14-1.07C16.5 9.01 14.48 7 12 7c-.37 0-.72.05-1.07.14zM2.01 3.87l2.68 2.68C3.06 7.83 1.77 9.53 1 11.5 2.73 15.89 7 19 12 19c1.52 0 2.98-.29 4.32-.82l3.42 3.42 1.41-1.41L3.42 2.45 2.01 3.87zm7.5 7.5 2.61 2.61c-.04.01-.08.02-.12.02-1.38 0-2.5-1.12-2.5-2.5 0-.05.01-.08.01-.13zm-3.4-3.4 1.75 1.75c-.23.55-.36 1.15-.36 1.78 0 2.48 2.02 4.5 4.5 4.5.63 0 1.23-.13 1.77-.36l.98.98c-.88.24-1.8.38-2.75.38-3.79 0-7.17-2.13-8.82-5.5.7-1.43 1.72-2.61 2.93-3.53z"></path></svg><span class="MuiTouchRipple-root css-w0pj6f"></span></button></div><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-yjsfm1"><span>Password</span></legend></fieldset></div></div><div class="MuiBox-root css-13dviku"><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y76r8l" href="/forgot-password">Forgot Password?</a></div><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-fullWidth css-1v7etgv" tabindex="0" type="submit" fdprocessedid="0mig0gl">Login<span class="MuiTouchRipple-root css-w0pj6f"></span></button><div class="MuiBox-root css-z0xj7h"><p class="MuiTypography-root MuiTypography-body1 css-1mgtm45">New on our platform?</p><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y76r8l" href="https://www.tablein.com/signup/" target="_blank" rel="noopener noreferrer">Create an account</a></div></form></div></div>
+</body>
+</html>

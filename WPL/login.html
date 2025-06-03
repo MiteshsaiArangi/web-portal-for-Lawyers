@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Law Portal Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #111;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+      max-width: 400px;
+      width: 100%;
+      border: 1px solid #444;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .tab-button {
+      flex: 1;
+      padding: 0.75rem;
+      cursor: pointer;
+      background: #222;
+      border: none;
+      border-radius: 8px 8px 0 0;
+      font-weight: bold;
+      color: #fff;
+      transition: background 0.3s;
+    }
+    .tab-button:hover {
+      background: #333;
+    }
+    .tab-button.active {
+      background: #000;
+      border-bottom: 2px solid #000;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+    .form-group input {
+      padding: 0.5rem;
+      border: 1px solid #555;
+      background: #000;
+      color: #fff;
+      border-radius: 8px;
+    }
+    .submit-btn {
+      padding: 0.75rem;
+      width: 100%;
+      border: none;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .submit-btn:hover {
+      background: #ccc;
+      color: #000;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Law Portal Login</h2>
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('user')">User Login</button>
+      <button class="tab-button" onclick="showTab('lawyer')">Lawyer Login</button>
+    </div>
+
+    <div id="user" class="tab-content active">
+      <form onsubmit="login(event, 'User')">
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Password" required />
+        </div>
+        <button type="submit" class="submit-btn">Login as User</button>
+      </form>
+    </div>
+
+    <div id="lawyer" class="tab-content">
+      <form onsubmit="login(event, 'Lawyer')">
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Password" required />
+        </div>
+        <button type="submit" class="submit-btn">Login as Lawyer</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showTab(role) {
+      document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelector(`[onclick*="${role}"]`).classList.add('active');
+      document.getElementById(role).classList.add('active');
+    }
+
+    function login(event, role) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('input[name=\"email\"]').value;
+      const password = form.querySelector('input[name=\"password\"]').value;
+      alert(`${role} Login\\nEmail: ${email}\\nPassword: ${password}`);
+      // Add actual login handling here
+    }
+  </script>
+
+</body>
+</html>

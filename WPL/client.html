@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Sign-In</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(https://res.cloudinary.com/dzeal21vu/image/upload/v1730729139/client-value-hero-800x450-622187f1af774645bd2e06dd981c69d5-8c20e78fd91d4ff1b193d69586b86499_a6hdzt.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffffff00;
+        }
+
+        /* Form container styling */
+        .signin-container {
+            background-color: #000000;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .signin-container h2 {
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .form-button:hover {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <h2> Client Sign-In</h2>
+        <form action="/submit" method="POST">
+            <input type="email" class="form-input" name="email" placeholder="Email" required>
+            <input type="password" class="form-input" name="password" placeholder="Create Password" required>
+            <input type="password" class="form-input" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit" class="form-button">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>
